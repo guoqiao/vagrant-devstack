@@ -26,4 +26,4 @@ settings -> network -> adaptor 2 -> allow all
 stack.sh will fail on wrapt, simlejson, 2 solutions:
 
 1) devstack/inc/python#L198: $cmd_pip $upgrade -I
-2) sudo apt purge python3-simplejson python3-wrapt --> preferred, but not tested
+2) sudo apt purge python3-simplejson python3-wrapt
