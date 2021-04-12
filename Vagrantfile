@@ -68,7 +68,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y vim htop tree wget curl silversearcher-ag
-    sudo apt-get install -y python3-dev python3-pip python3-apt ipython
+    sudo apt-get install -y python3-dev python3-pip python3-apt python3-ipython
+    sudo apt-get install -y python3-openstacksdk
     sudo apt-get purge -y python3-simplejson python3-wrapt
     sudo python3 -m pip install -U pip
     sudo python3 -m pip install -U ansible
