@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/bionic64"
+  config.disksize.size = "70GB"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -52,7 +53,6 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = false
-    # Customize the amount of memory on the VM:
     vb.name = "devstack"
     vb.memory = 16384
     vb.cpus = 4
@@ -73,6 +73,5 @@ Vagrant.configure("2") do |config|
     sudo apt-get purge -y python3-simplejson python3-wrapt
     sudo python3 -m pip install -U pip
     sudo python3 -m pip install -U ansible
-
   SHELL
 end
