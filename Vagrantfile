@@ -13,7 +13,9 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/bionic64"
-  config.disksize.size = "70GB"
+  config.vm.provider :virtualbox
+  # need envvar VAGRANT_EXPERIMENTAL="disks"
+  config.vm.disk :disk, size: "80GB", primary: true
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
